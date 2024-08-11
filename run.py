@@ -36,3 +36,18 @@ def get_topic_selection():
         selection = input('Invalid selection. Please select option 1 to 5:\n').strip().lower()
     
     return selection
+
+
+def main():
+    """Main function to run the quiz setup."""
+    # Get the user's name and welcome them to the game
+    user_name = get_user_name()
+    print(f'Welcome to the Mind Master game, {user_name}!')
+    
+    # Display the list of available quiz topics
+    display_topic_options()
+    
+    # Get and validate the user's topic selection
+    selected_option = get_topic_selection()
+    print(f'You selected option {selected_option}')
+
