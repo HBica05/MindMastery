@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+inputted = input('type your name please: ').strip().lower()
+
+
+print(f'Welcome to the Mind Master game {inputted} !')
+
