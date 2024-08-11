@@ -36,7 +36,7 @@ def get_topic_selection():
     return selection
 
 def main():
-    """Main function to run the quiz setup."""
+    """Main function to run the quiz setup and track score"""
     # Get the user's name and welcome them to the game
     user_name = get_user_name()
     print(f'Welcome to the Mind Master game, {user_name}!\n')
@@ -48,21 +48,35 @@ def main():
     selected_option = get_topic_selection()
     print(f'You selected option {selected_option}')
 
-# Entry point of the script
-if __name__ == "__main__":
-    main()
+    # Ask a question based on the selected option and track the score
+    ask_question(selected_option)
 
 
 def ask_question(topic):
     """Ask a question based on the selected topic and validate the answer."""
     questions = {
-        "1": {"question": "What is the capital of France?", "answer": "paris"},
-        "2": {"question": "What is the chemical symbol for water?", "answer": "h2o"},
-        "3": {"question": "Which sport is known as 'the beautiful game'?", "answer": "soccer"},
-        "4": {"question": "What is the largest ocean on Earth?", "answer": "pacific"},
-        "5": {"question": "What is the square root of 64?", "answer": "8"}
-    }
-
+    "1": [
+        {"question": "What is the capital of France?", "answer": "paris"},
+        {"question": "What is the largest city in France?", "answer": "paris"}
+    ],
+    "2": [
+        {"question": "What is the chemical symbol for water?", "answer": "h2o"},
+        {"question": "What element has the symbol 'O'?", "answer": "oxygen"}
+    ],
+    "3": [
+        {"question": "Which sport is known as 'the beautiful game'?", "answer": "soccer"},
+        {"question": "How many players are there in a soccer team?", "answer": "11"}
+    ],
+    "4": [
+        {"question": "What is the largest ocean on Earth?", "answer": "pacific"},
+        {"question": "Which continent is the Sahara Desert located on?", "answer": "africa"}
+    ],
+    "5": [
+        {"question": "What is the square root of 64?", "answer": "8"},
+        {"question": "What is the value of pi (π) rounded to two decimal places?", "answer": "3.14"}
+    ]
+}
+# question asking and answer validation
     q = questions[topic]
     user_answer = input(q["question"] + "\n").strip().lower()
     if user_answer == q["answer"]:
