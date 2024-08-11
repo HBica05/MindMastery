@@ -62,3 +62,10 @@ def ask_question(topic):
         "4": {"question": "What is the largest ocean on Earth?", "answer": "pacific"},
         "5": {"question": "What is the square root of 64?", "answer": "8"}
     }
+
+    q = questions[topic]
+    user_answer = input(q["question"] + "\n").strip().lower()
+    if user_answer == q["answer"]:
+        print("Correct!")
+    else:
+        print(f"Wrong! The correct answer was {q['answer']}.")  
