@@ -23,12 +23,16 @@ Topics:
     """
 )
 
-# ensures selection of a topic option 
-option_inputted = input('Select option 1 to 5:\n ').strip().lower()
-available_options = ["1", "2", "3", "4", "5"]
-
-# handles input validation
-while option_inputted not in available_options:
-    option_inputted = input('Please select option 1 to 5:\n ')
-
-print(f'You selected {option_inputted}')    
+def get_topic_selection():
+    """Prompt the user to select a valid topic option."""
+    # Define the set of valid options for topic selection
+    available_options = {"1", "2", "3", "4", "5"}
+    
+    # Prompt the user to select an option, stripping whitespace and converting to lowercase
+    selection = input('Select option 1 to 5:\n').strip().lower()
+    
+    # Continue prompting until the user provides a valid option
+    while selection not in available_options:
+        selection = input('Invalid selection. Please select option 1 to 5:\n').strip().lower()
+    
+    return selection
