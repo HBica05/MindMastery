@@ -6,3 +6,13 @@ while inputted == '':
         ).lower()
 print(f'Welcome to the Mind Master game {inputted} !')
 
+print(
+    """
+Please enter your preferred Topic:
+1. General Knowledge
+2. Science
+3. Sports
+4. Geography
+5. Mathematics
+    """
+)
