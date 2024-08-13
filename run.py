@@ -20,6 +20,7 @@ Topics:
 5. Mathematics
     """)
 
+
 def get_topic_selection():
     """Prompt the user to select a valid topic option."""
     valid_options = ["1", "2", "3", "4", "5"]
@@ -29,7 +30,19 @@ def get_topic_selection():
             'Invalid selection! Please select from 1 to 5:\n').strip()
     return selection
 
-    
+
+def provide_feedback(score, total_questions):
+    """Provide feedback based on the user's score."""
+    if score == total_questions:
+        return "You are a Genius!"
+    elif score >= total_questions * 0.8:
+        return "Excellent work!"
+    elif score >= total_questions * 0.5:
+        return "Good job!"
+    else:
+        return "Keep trying, you can do better!"
+
+
 def main():
     """Main function to run the quiz setup and track score"""
     user_name = get_user_name()
@@ -43,8 +56,10 @@ def main():
 
     # Ask a question based option and difficulty, and track the score
     score = ask_multiple_questions(selected_option)
+    total_questions = len([q for q in ask_multiple_questions(selected_option)])
 
-    # You can choose to save or display the score here if needed
+    # Provide feedback based on the score
+    feedback = provide_feedback(score, total_questions)
     print(f'Your final score is {score}.')
 
 
