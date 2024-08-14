@@ -26,15 +26,14 @@ def get_topic_selection():
     valid_options = ["1", "2", "3", "4", "5"]
     selection = input('Select one of the options 1 to 5:\n').strip()
     while selection not in valid_options:
-        selection = input(
-            'Invalid selection! Please select from 1 to 5:\n').strip()
+        selection = input('Invalid selection! Please select from 1 to 5:\n').strip()
     return selection
 
 
 def provide_feedback(score, total_questions):
     """Provide feedback based on the user's score."""
     if score == total_questions:
-        return "You are a Genius!"
+        return "You are a GENIUS!"
     elif score >= total_questions * 0.8:
         return "Excellent work!"
     elif score >= total_questions * 0.5:
@@ -43,25 +42,45 @@ def provide_feedback(score, total_questions):
         return "Keep trying, you can do better!"
 
 
+
+def end_of_quiz_prompt():
+    """Prompt the user to decide whether to return to the home page or exit the game."""
+    while True:
+        choice = input("Would you like to return to the home page or exit the game? (home/exit)\n").strip().lower()
+        if choice == "home":
+            return True
+        elif choice == "exit":
+            return False
+        else:
+            print("Invalid choice. Please enter 'home' or 'exit'.")
+
+
 def main():
     """Main function to run the quiz setup and track score"""
     user_name = get_user_name()
-    print(f'Welcome to the Mind Master game, {user_name}!\n')
-    print("To play the game, select one of the topics below.")
+    print("------------------------------------------------")
+    print(f'Welcome to the MIND MASTER game, {user_name}!\n')
+    print("------------------------------------------------")
 
-    display_topic_options()
+    while True:
+        print("To play the game, select one of the topics below.")
+        display_topic_options()
 
-    selected_option = get_topic_selection()
-    print(f'You selected option {selected_option}')
+        selected_option = get_topic_selection()
+        print(f'You selected option {selected_option}')
 
-    # Ask a question based option and difficulty, and track the score
-    score = ask_multiple_questions(selected_option)
-    total_questions = len([q for q in ask_multiple_questions(selected_option)])
+        # Ask a question based option and difficulty, and track the score
+        score = ask_multiple_questions(selected_option)
+        total_questions = len([q for q in ask_multiple_questions(selected_option)])
 
-    # Provide feedback based on the score
-    feedback = provide_feedback(score, total_questions)
-    print(f'Your final score is {score}.')
+        # Provide feedback based on the score
+        feedback = provide_feedback(score, total_questions)
+        print(f'Your final score is {score}/{total_questions}. {feedback}')
 
+        # Ask user if they want to return to the home page or exit the game
+        if not end_of_quiz_prompt():
+            print("Thank you for playing! Goodbye!")
+            break
 
 if __name__ == "__main__":
     main()
