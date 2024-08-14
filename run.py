@@ -63,24 +63,28 @@ def main():
     print("------------------------------------------------")
 
     while True:
+        # Display available topics and get user's selection
         print("To play the game, select one of the topics below.")
         display_topic_options()
 
         selected_option = get_topic_selection()
         print(f'You selected option {selected_option}')
 
-        # Ask a question based option and difficulty, and track the score
-        score = ask_multiple_questions(selected_option)
-        total_questions = len([q for q in ask_multiple_questions(selected_option)])
-
-        # Provide feedback based on the score
-        feedback = provide_feedback(score, total_questions)
-        print(f'Your final score is {score}/{total_questions}. {feedback}')
+        # Ask questions based on the selected option and track the score
+        questions = ask_multiple_questions(selected_option)
+        if questions:
+            score = questions['score']
+            total_questions = questions['total_questions']
+            feedback = provide_feedback(score, total_questions)
+            print(f'Your final score is {score}/{total_questions}. {feedback}')
+        else:
+            print("No more available questions for this category.")
 
         # Ask user if they want to return to the home page or exit the game
         if not end_of_quiz_prompt():
-            print("Thank you for playing! Goodbye!")
+            print("THANK YOU FOR PLAYING! GOODBYE!")
             break
+
 
 if __name__ == "__main__":
     main()

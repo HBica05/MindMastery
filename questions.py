@@ -1,5 +1,5 @@
 def ask_multiple_questions(topic):
-    """Ask a question based on the selected topic and validate the answer."""
+    """Ask a question based on the selected topic and validate the answers."""
     questions = {
         "1": [
             {"question": "1. What is the capital of France?",
@@ -154,21 +154,27 @@ def ask_multiple_questions(topic):
     }
 
     score = 0
+
+    # Prompt the user to select a difficulty level and validate the input
     difficulty_level = input("Select difficulty level (easy/medium/hard):\n").strip().lower()
     difficulty = ["easy", "medium", "hard"]
 
     while difficulty_level not in difficulty:
         difficulty_level = input("Invalid, options are easy, medium, or hard. Enter again:\n").strip().lower()
-
+   
+    # Filter questions based on the selected topic and difficulty level
     selected_questions = [q for q in questions.get(topic, []) if q['difficulty'] == difficulty_level]
 
+    # Check for available questions for the selected difficulty level
     if not selected_questions:
         print("No questions available for this difficulty level.")
         print("Please choose a different level.")
-        return 0
+        return 0  # Return score of 0 if no questions are available
 
+    # Loop through the selected questions and ask them to the user
     for q in selected_questions:
         print(q["question"])
+       
         hint = input("Do you want a hint? (yes/no)\n").strip().lower()
         if hint == "yes":
             print(f"Hint: {q['hint']}")
@@ -178,6 +184,9 @@ def ask_multiple_questions(topic):
             score += 1
         else:
             print(f"Wrong! The correct answer was {q['answer']}.")
-
+    
+    # Display the user's score and the total number of questions
+    print('---------------------------------------------------------------')
     print(f'Your score for this topic is {score}/{len(selected_questions)}.')
+    print('---------------------------------------------------------------')
     return score
