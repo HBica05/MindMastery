@@ -26,63 +26,124 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
 
 * Basic knowledge of how to run Python scripts.
 
-## How to Run
+### Steps to Install
 
-1. [Cloning of the Repository Code locally] (#Cloning-of-the-Repository-Code-locally)
+1. Clone the Repository
+   
+   [Cloning of the Repository Code locally] (#Cloning-of-the-Repository-Code-locally)
    * git clone https://github.com/yourusername/mind-master-quiz-game.git
    
-   cd mind-master-quiz-game(project directory)
+   * cd mind-master-quiz-game(project directory)
 
-2. Ensure Python Environment is installed.
-* Verify is installed by running:
+    ![alt text](image-10.png)
+
+2. Ensure Python Environment.
+* Make sure you have Python 3.x installed. You can verify this by running:
   
     ![alt text](image-9.png)
 
+3. Navigate to Project Directory
+ * Change to the directory where the run.py and questions.py files are located.  
 
-* Run the Program
+4. Run the Application
 
-    * Execute the following command to start the game: python run.py
-  
-        ![alt text](image.png)
+* Execute the following command to start the quiz game:  
+    ![alt text](image-11.png)  
 
-* The game will prompt you to enter your name and select a quiz topic. Follow the on-screen instructions to play.
-        
+
+## Usage
+### Running the Game
+1. Start the Game
+
+* Run the run.py script using Python. The application will prompt you to enter a name and select a quiz topic.
+     
     ![alt text](image-1.png)
 
     ![alt text](image-2.png)
 
+2. Select a Topic
+
+* You will be presented with a list of topics. Choose a number corresponding to the topic you want to be quizzed on.
+    
     ![alt text](image-3.png)
 
+3. Choose Difficulty Level
+
+* After selecting a topic, you will be asked to choose a difficulty level: easy, medium, or hard.
+    
     ![alt text](image-4.png)
 
-    ![alt text](image-5.png)
+4. Answer Questions
 
-    ![alt text](image-6.png)
+* Answer the questions as they appear. You can request a hint if needed.
 
-    ![alt text](image-7.png)
+![alt text](image-5.png)
 
-    ![alt text](image-8.png)
+5. Review Feedback
+
+* After answering all questions, the game will provide feedback on your performance and your final score.
+  
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-12.png)
     
+6. Continue or Exit
+
+You will have the option to return to the home page or exit the game.
+
+![alt text](image-13.png)
+
+   * If exit is selected, a message is displayed, 
+    
+![alt text](image-14.png)
+
+   * otherwise it returns to the main menu and the game starts all over again.
+
+![alt text](image-15.png)
+
+## File Structure
+* `run.py`: The main script that runs the quiz game. Handles user input, displays questions, and provides feedback.
+  
+* `questions.py`: Contains quiz questions categorized by topic and difficulty level. Provides functions to retrieve and filter questions.
+
 ## Functions Overview
+### `run.py`
+* `get_user_name()`
+    * Prompts the user to create a name. Ensures the input is non-empty.
 
-* get_user_name()
-Prompts the user to create a name. Ensures the input is non-empty.
+* `display_topic_options()`
+    * Displays a list of available quiz topics to choose from.
 
-* display_topic_options()
-Displays a list of available quiz topics to choose from.
+* `get_topic_selection()`
+    * Prompts the user to select a valid topic option from 1 to 5.
 
-* get_topic_selection()
-Prompts the user to select a valid topic option from 1 to 5.
+* `provide_feedback(score, total_questions)`
+    * Provides feedback based on the user's score out of the total number of questions.
 
-* provide_feedback(score, total_questions)
-Provides feedback based on the user's score out of the total number of questions.
+* `end_of_quiz_prompt()`
+    * Prompts the user to decide whether to return to the home page or exit the game.
 
-* end_of_quiz_prompt()
-Prompts the user to decide whether to return to the home page or exit the game.
+* `main()`
+    * Runs the main quiz game setup, handles user interactions, and tracks the score. It controls the flow of the game, from selecting topics to providing feedback and managing game sessions.
+### `questions.py`
+1. `get_questions()`
 
-* main()
-Runs the main quiz game setup, handles user interactions, and tracks the score. It controls the flow of the game, from selecting topics to providing feedback and managing game sessions.
+    * Returns a dictionary of quiz questions categorized by topic and difficulty level.
+2. `ask_multiple_questions(topic, difficulty_level)`
+   
+   *  Asks a set of questions based on the selected topic and difficulty level, validates answers, and calculates the score.
+  
+## Contributing
+* Contributions to the MIND MASTER Quiz Game are welcome! If you'd like to contribute, please follow these guidelines:
 
+* Fork the Repository: Create your own fork of the repository.
+* Clone Your Fork: Clone the forked repository to your local machine.
+* Create a Branch: Create a new branch for your changes.
+* Make Your Changes: Implement your changes or improvements.
+* Test Your Changes: Ensure your changes work as expected and do not introduce bugs.
+* Submit a Pull Request: Push your changes to your fork and submit a pull request to the original repository.
 
 ## Cloning of the Repository Code locally
 
@@ -91,6 +152,8 @@ Runs the main quiz game setup, handles user interactions, and tracks the score. 
 * Click on HTTPS and copy the repository link.
 * Open the IDE of your choice and and paste the copied git url into the IDE terminal.
 * The project is now created as a local clone.
+
+## Deployment
 
 ## Contact
 
