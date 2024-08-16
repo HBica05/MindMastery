@@ -67,7 +67,7 @@ def end_of_quiz_prompt():
             print(f"An error occurred while processing your choice: {e}")
 
 def main():
-    """Main function to run the quiz setup and track score"""
+    """Main function to run the quiz setup and track score."""
     try:
         user_name = get_user_name()
         if user_name is None:
