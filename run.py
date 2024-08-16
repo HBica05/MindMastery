@@ -38,6 +38,8 @@ def get_topic_selection():
 def provide_feedback(score, total_questions):
     """Provide feedback based on the user's score."""
     try:
+        if total_questions == 0:
+            return "No questions were asked. Cannot provide feedback."
         if score == total_questions:
             return "You are a GENIUS!"
         elif score >= total_questions * 0.8:
@@ -46,8 +48,6 @@ def provide_feedback(score, total_questions):
             return "Good job!"
         else:
             return "Keep trying, you can do better!"
-    except ZeroDivisionError:
-        return "No questions were asked. Cannot provide feedback."
     except Exception as e:
         print(f"An error occurred while providing feedback: {e}")
         return "Error in feedback."
@@ -86,16 +86,18 @@ def main():
             selected_option = get_topic_selection()
             print(f'You selected option {selected_option}')
 
-            # Ask questions based on the selected option and track the score
+            # Prompt for difficulty level
+            difficulty_level = input("Select difficulty level (easy/medium/hard):\n").strip().lower()
+            valid_difficulties = ["easy", "medium", "hard"]
+
+            while difficulty_level not in valid_difficulties:
+                difficulty_level = input("Invalid selection. Options are easy, medium, or hard. Enter again:\n").strip().lower()
+
+            # Ask questions based on the selected option and difficulty level, and track the score
             try:
-                questions = ask_multiple_questions(selected_option)
-                if questions:
-                    score = questions.get('score', 0)
-                    total_questions = questions.get('total_questions', 0)
-                    feedback = provide_feedback(score, total_questions)
-                    print(f'Your final score is {score}/{total_questions}. {feedback}')
-                else:
-                    print("No more available questions for this category.")
+                score, total_questions = ask_multiple_questions(selected_option, difficulty_level)
+                feedback = provide_feedback(score, total_questions)
+                print(f'Your final score is {score}/{total_questions}. {feedback}')
             except Exception as e:
                 print(f"An error occurred while asking questions: {e}")
 
