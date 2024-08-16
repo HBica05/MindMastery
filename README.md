@@ -6,7 +6,7 @@ Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application de
 
  Mind Mastery repository URL: [https://github.com/yourusername/mind-master-quiz-game]
 
-# Overview
+## Overview
 The MIND MASTER Quiz Game is a Python-based quiz application that allows users to answer questions from multiple topics. Users can choose from various topics and difficulty levels to tailor the quiz to their preferences. The application provides feedback based on user performance and allows them to continue or exit after each quiz session.
 
 ## Features
@@ -113,11 +113,15 @@ You will have the option to return to the home page or exit the game.
 * `get_user_name()`
     * Prompts the user to create a name. Ensures the input is non-empty.
 
+    * Returns: User's name as a string.
+
 * `display_topic_options()`
     * Displays a list of available quiz topics to choose from.
 
 * `get_topic_selection()`
     * Prompts the user to select a valid topic option from 1 to 5.
+
+    * Returns: Selected topic option as a string.
 
 * `provide_feedback(score, total_questions)`
     * Provides feedback based on the user's score out of the total number of questions.
@@ -125,12 +129,15 @@ You will have the option to return to the home page or exit the game.
 * `end_of_quiz_prompt()`
     * Prompts the user to decide whether to return to the home page or exit the game.
 
+      * Returns: Boolean value (`True` for "home" and `False` for "exit").
+
 * `main()`
     * Runs the main quiz game setup, handles user interactions, and tracks the score. It controls the flow of the game, from selecting topics to providing feedback and managing game sessions.
 ### `questions.py`
 1. `get_questions()`
 
     * Returns a dictionary of quiz questions categorized by topic and difficulty level.
+  
 2. `ask_multiple_questions(topic, difficulty_level)`
    
    *  Asks a set of questions based on the selected topic and difficulty level, validates answers, and calculates the score.
@@ -145,6 +152,50 @@ You will have the option to return to the home page or exit the game.
 * Test Your Changes: Ensure your changes work as expected and do not introduce bugs.
 * Submit a Pull Request: Push your changes to your fork and submit a pull request to the original repository.
 
+# Testing
+To ensure the functionality of your quiz game, I followed these testing guidelines:
+
+## 1. Unit Testing
+ * To verify that each function in run.py and questions.py behaves as expected.
+
+* Setup:
+
+  - Ensured I had Python installed.
+
+    ### Testing Functions in `run.py`:
+      * `get_user_name()`:
+        * Tested with different inputs, including valid names and empty strings.
+        * Ensured it correctly handles empty inputs and returns a valid name.
+
+      * `get_topic_selection()`:
+        * Tested with valid and invalid inputs.
+        * Ensured it returns a valid topic option and prompts again for 
+        invalid inputs.
+
+    * `provide_feedback(score, total_questions)`:
+        * Tested with different score and total question values.
+        * Verified that the feedback message corresponds to the score ranges.
+    
+    * `end_of_quiz_prompt()`:
+        * Tested with valid inputs ("home" and "exit") and invalid inputs.
+        * Ensured it returns True for "home" and False for "exit".
+
+    ### Testing Functions in `questions.py`:
+
+      * `get_questions()`:
+        * Verified the structure and content of the returned dictionary.
+        * Ensured it contains the correct questions and details for each topic.
+      * `ask_multiple_questions(topic, difficulty_level)`:
+        * Mock user input to simulate answering questions.
+        * Tested with various topics and difficulty levels.
+        * Verified that scores are calculated correctly and responses are accurate.
+
+## Bugs
+* No bugs remaining
+* Bugs such as `variable not defined` were encountered during the development of the application. Corrected by making sure that correct spelling of the variable was used.
+* Indentation error: making sure that the code was indented correctly.
+* Exception-handling errors: Fixed by providing a user with a meaningfull message if an unexpected value is input.
+
 ## Cloning of the Repository Code locally
 
 * Go to the Github repository that you want to clone.
@@ -155,7 +206,22 @@ You will have the option to return to the home page or exit the game.
 
 ## Deployment
 
+## Credits
+* I am deeply grateful to my mentor, Spencer Barriball, for their exceptional guidance and support throughout this project. Their insights and assistance were crucial to its success.
+
+- **[Code Institute learning materials](https://codeinstitute.net/)**: For providing comprehensive learning resources and guidance throughout the development process.
+
+- **[Heroku](https://www.heroku.com/)**: The platform provided seamless deployment and hosting services for the application.
+
+- Inspiration video for the Mind Mastery Game: (https://youtu.be/zehwgTB0vV8?si=1vWFn7zUA0-1SeJX)
+
+- A big inspiration for my README file was from : (https://github.com/zioan/pp3_inventory.git)
+
+
 ## Contact
 
 For any issues or contributions, please contact 
 - bicahaadiyah@gmail.com
+
+
+[Back to Top](#Mind-Master-Quiz-Game)

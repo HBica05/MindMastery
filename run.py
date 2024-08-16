@@ -98,7 +98,7 @@ def main():
                 score, total_questions = ask_multiple_questions(selected_option, difficulty_level)
                 feedback = provide_feedback(score, total_questions)
                 print("------------------------------------------------------------------------")
-                print(f'Your score for this category is {score}/{total_questions}. {feedback}')
+                print(f'Your score for this category is {score}:{total_questions}. {feedback}')
                 print("------------------------------------------------------------------------")
             except Exception as e:
                 print(f"An error occurred while asking questions: {e}")
