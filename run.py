@@ -41,13 +41,13 @@ def provide_feedback(score, total_questions):
         if total_questions == 0:
             return "No questions were asked. Cannot provide feedback."
         if score == total_questions:
-            return "You are a GENIUS!"
+            return "\nYou are a GENIUS!"
         elif score >= total_questions * 0.8:
-            return "Excellent work!"
+            return "\nExcellent work!"
         elif score >= total_questions * 0.5:
-            return "Good job!"
+            return "\nGood job!"
         else:
-            return "Keep trying, you can do better!"
+            return "\nKeep trying, you can do better!"
     except Exception as e:
         print(f"An error occurred while providing feedback: {e}")
         return "Error in feedback."
@@ -97,7 +97,9 @@ def main():
             try:
                 score, total_questions = ask_multiple_questions(selected_option, difficulty_level)
                 feedback = provide_feedback(score, total_questions)
-                print(f'Your final score is {score}/{total_questions}. {feedback}')
+                print("------------------------------------------------------------------------")
+                print(f'Your score for this category is {score}/{total_questions}. {feedback}')
+                print("------------------------------------------------------------------------")
             except Exception as e:
                 print(f"An error occurred while asking questions: {e}")
 
