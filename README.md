@@ -4,7 +4,7 @@ Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application de
 
 [Live project hosted on Heroku]:()
 
- Mind Mastery repository URL: [https://github.com/yourusername/mind-master-quiz-game]
+ Mind Mastery repository URL: [https://github.com/HBica05/MindMastery.git]
 
 ## 🔍 Overview
 The MIND MASTER Quiz Game is a Python-based quiz application that allows users to answer questions from multiple topics. Users can choose from various topics and difficulty levels to tailor the quiz to their preferences. The application provides feedback based on user performance and allows them to continue or exit after each quiz session.
@@ -30,9 +30,9 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
 
 1. Clone the Repository
    
-    [How-to-clone](#Cloning-of-the-Repository-Code-locally)
+    [How-to-clone](#🔄-Cloning-of-the-Repository-Code-locally)
 
-   * git clone https://github.com/yourusername/mind-master-quiz-game.git
+   * git clone (https://github.com/HBica05/MindMastery.git)
    
    * cd mind-master-quiz-game(project directory)
 
@@ -232,6 +232,8 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 - Inspiration video for the Mind Mastery Game: (https://youtu.be/zehwgTB0vV8?si=1vWFn7zUA0-1SeJX)
 
 - A big inspiration for my README file was from : (https://github.com/zioan/pp3_inventory.git)
+- Code ideas were taken from ()
+- Other code inspirations were taken from (https://stackoverflow.com/)
 
 ## 📞 Contact
 For any issues or contributions, please contact: bicahaadiyah@gmail.com
