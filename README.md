@@ -153,8 +153,28 @@ You will have the option to return to the home page or exit the game.
 * Test Your Changes: Ensure your changes work as expected and do not introduce bugs.
 * Submit a Pull Request: Push your changes to your fork and submit a pull request to the original repository.
 
+## Logic Flow
+Starting with a flowchart helped me visualize how the program would flow and its sequence.
+
+![alt text](image-18.png)
+
 # 🧪 Testing
 To ensure the functionality of your quiz game, I followed these testing guidelines:
+
+## PEP8 Testing
+PEP8 testing focuses on ensuring that the codebase adheres to the guidelines outlined in PEP8, the official style guide for Python code. Key aspects of PEP8 testing include:
+
+* Code Formatting: Verify that the code follows consistent formatting conventions, including indentation, line length, and spacing.
+
+* Naming Conventions: Ensure that variable names, function names, and other identifiers adhere to PEP8 naming conventions to improve code readability and maintainability.
+
+* Code Structure: Review the overall structure of the codebase to identify any potential improvements in organization and clarity.
+
+* Code Linting: Utilize automated code analysis tools such as Flake8 or Python Indent to identify and correct violations of PEP8 guidelines.
+
+All Python files have been validated using the [Code Institute PEP8 Validator](https://pep8ci.herokuapp.com/) to ensure compliance with PEP8 standards. Each file returned the same result: "All clear, no errors found."
+
+![alt text](image-16.png)
 
 ## 1. Unit Testing
  * To verify that each function in run.py and questions.py behaves as expected.
@@ -195,8 +215,9 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
 * No bugs remaining
 * Bugs such as `variable not defined` were encountered during the development of the application. Corrected by making sure that correct spelling of the variable was used.
 * Exception-handling errors: Fixed by providing a user with a meaningfull message if an unexpected value is input.
-* trailing whitespace: Indentation was fixed.
-
+* `trailing whitespace`: Indentation was fixed.
+* `Line too long` error was a common error displayed by the PEP8 validator: Fixed by breaking long lines into smaller lines.
+  
 ## 🔄 Cloning of the Repository Code locally
 
 * Go to the Github repository that you want to clone.
@@ -232,9 +253,10 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 - Inspiration video for the Mind Mastery Game: (https://youtu.be/zehwgTB0vV8?si=1vWFn7zUA0-1SeJX)
 
 - A big inspiration for my README file was from : (https://github.com/zioan/pp3_inventory.git)
-- Code ideas were taken from ()
-- Other code inspirations were taken from (https://stackoverflow.com/)
+- Code inspirations were taken from (https://stackoverflow.com/)
 
+- A bif help in building a flowchart:(https://youtu.be/OQcWiFA5B_0?si=y74iPmSYEK6wLKgQ)
+  
 ## 📞 Contact
 For any issues or contributions, please contact: bicahaadiyah@gmail.com
 

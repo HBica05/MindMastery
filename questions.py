@@ -22,7 +22,7 @@ def get_questions():
              "answer": "harper lee",
              "hint": "Her first name is Harper.",
              "difficulty": "hard"},
-            {"question": "2. What is the name of the first artificial satellite launched into space?",
+            {"question": "2. First artificial satellite launched into space?",
              "answer": "sputnik 1",
              "hint": "It was named after a famous Russian scientist.",
              "difficulty": "hard"},
@@ -48,9 +48,11 @@ def get_questions():
              "answer": "jupiter",
              "hint": "It's the largest planet in our solar system.",
              "difficulty": "hard"},
-            {"question": "2. Name the process by which plants convert atmospheric nitrogen into a form usable for their growth?",
+            {"question": "2. Name the process by which plants convert "
+                "atmospheric nitrogen into a form usable for their growth?",
              "answer": "nitrogen fixation",
-             "hint": "This process involves bacteria and is crucial for enriching the soil.",
+             "hint": "This process involves bacteria and is crucial for "
+                "enriching the soil.",
              "difficulty": "hard"},
         ],
         "3": [
@@ -70,13 +72,15 @@ def get_questions():
              "answer": "batting practice",
              "hint": "It's when a player practices hitting the ball.",
              "difficulty": "medium"},
-            {"question": "1. How many points for a touchdown in American football?",
+            {"question": "1. How many points for a touchdown in American "
+                "football?",
              "answer": "6",
              "hint": "This does not include extra points or field goals.",
              "difficulty": "hard"},
-            {"question": "2. Who holds the record for the most career home runs in Major League Baseball (MLB)?",
+            {"question": "2. Who holds the record for the most career home "
+                "runs in Major League Baseball (MLB)?",
              "answer": "babe ruth",
-             "hint": "This record was set by a player known as The Sultan of Swat.",
+             "hint": "This was set by a player known as The Sultan of Swat.",
              "difficulty": "hard"},
         ],
         "4": [
@@ -88,7 +92,8 @@ def get_questions():
              "answer": "africa",
              "hint": "It's the second-largest continent by land area.",
              "difficulty": "easy"},
-            {"question": "1. Which river is the primary source of water for the city of Cairo, Egypt?",
+            {"question": "1. Which river is the primary source of water "
+                "for the city of Cairo, Egypt?",
              "answer": "nile river",
              "hint": "This river flows northward through northeastern Africa.",
              "difficulty": "medium"},
@@ -106,47 +111,45 @@ def get_questions():
              "difficulty": "hard"},
         ],
         "5": [
-            
             {"question": "1. What is the value of pi to two decimal places?",
              "answer": "3.14",
              "hint": "Ratio of a circle's circumference to its diameter.",
              "difficulty": "easy"},
-
             {"question": "2. What is 15 divided by 3?",
              "answer": "5",
              "hint": "It's a single-digit number.",
              "difficulty": "easy"},
-
             {"question": "1. What is the result of 7 * 9?",
              "answer": "63",
              "hint": "It's the product of two single-digit numbers.",
              "difficulty": "medium"},
-           
             {"question": "2. Next number in the sequence: 2, 4, 8, 16, ...?",
              "answer": "32",
              "hint": "Each number is double the previous one.",
              "difficulty": "medium"},
-
             {"question": "1. What is the square root of 64?",
              "answer": "8",
              "hint": "It's a whole number between 7 and 9.",
              "difficulty": "hard"},
-
             {"question": "2. What is the value of 25^2 * 12?",
              "answer": "7500",
-             "hint": "Find the square of 25 and then multiply the result by 12.",
+             "hint": "Square of 25 and then multiply the result by 12.",
              "difficulty": "hard"},
         ]
     }
 
+
 def ask_multiple_questions(topic, difficulty_level):
-    """Ask questions based on the selected topic and difficulty level, and validate the answers."""
+    """Ask questions based on the selected topic and difficulty level, and
+    validate the answers."""
     questions = get_questions().get(topic, [])
     score = 0
 
     try:
         # Filter questions based on the selected difficulty level
-        selected_questions = [q for q in questions if q['difficulty'] == difficulty_level]
+        selected_questions = [
+            q for q in questions if q['difficulty'] == difficulty_level
+        ]
 
         # Check for available questions for the selected difficulty level
         if not selected_questions:
@@ -157,18 +160,25 @@ def ask_multiple_questions(topic, difficulty_level):
         for q in selected_questions:
             try:
                 print(q["question"])
-                
-                hint_request = input("Do you want a hint? (yes/no)\n").strip().lower()
+                # Break down the long line into shorter lines
+                hint_request_input = input(
+                    "Do you want a hint? (yes/no)\n"
+                )
+                hint_request = hint_request_input.strip().lower()
+
                 if hint_request == "yes":
-                    print(f"Hint: {q['hint']}")
-                
-                user_answer = input("Your answer:\n").strip().lower()
+                    hint = q['hint']
+                    print(f"Hint: {hint}")
+
+                user_answer_input = input("Your answer:\n")
+                user_answer = user_answer_input.strip().lower()
+
                 if user_answer == q["answer"]:
                     print("Correct!")
                     score += 1
                 else:
-                    print(f"Wrong! The correct answer was {q['answer']}.")
-            
+                    correct_answer = q['answer']
+                    print(f"Wrong! The correct answer was {correct_answer}.")
             except Exception as e:
                 print(f"An error occurred while processing the question: {e}")
 

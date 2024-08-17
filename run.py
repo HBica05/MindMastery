@@ -1,15 +1,19 @@
 from questions import ask_multiple_questions
 
+
 def get_user_name():
     """Prompt the user to create a name and ensure it is non-empty."""
     try:
         name = input('Create a name for you:\n').strip()
         while not name:
-            name = input('You did not type anything! Please input a name:\n').strip()
+            name = input(
+                'You did not type anything! Please input a name:\n'
+            ).strip()
         return name
     except Exception as e:
         print(f"An error occurred while getting your name: {e}")
         return None
+
 
 def display_topic_options():
     """Display a list of available quiz topics."""
@@ -21,6 +25,7 @@ Topics:
 4. Geography
 5. Mathematics
     """)
+
 
 def get_topic_selection():
     """Prompt the user to select a valid topic option."""
@@ -34,6 +39,7 @@ def get_topic_selection():
                 print('Invalid selection! Please select from 1 to 5:\n')
         except Exception as e:
             print(f"An error occurred while selecting a topic: {e}")
+
 
 def provide_feedback(score, total_questions):
     """Provide feedback based on the user's score."""
@@ -52,11 +58,16 @@ def provide_feedback(score, total_questions):
         print(f"An error occurred while providing feedback: {e}")
         return "Error in feedback."
 
+
 def end_of_quiz_prompt():
-    """Prompt the user to decide whether to return to the home page or exit the game."""
+    """Prompt the user to decide whether to return to the home page or exit
+    the game."""
     while True:
         try:
-            choice = input("Would you like to return to the home page or exit the game? (home/exit)\n").strip().lower()
+            choice = input(
+                "Would you like to return to the home page or exit the game? "
+                "(home/exit)\n"
+            ).strip().lower()
             if choice == "home":
                 return True
             elif choice == "exit":
@@ -65,6 +76,7 @@ def end_of_quiz_prompt():
                 print("Invalid choice. Please enter 'home' or 'exit'.")
         except Exception as e:
             print(f"An error occurred while processing your choice: {e}")
+
 
 def main():
     """Main function to run the quiz setup and track score."""
@@ -87,19 +99,37 @@ def main():
             print(f'You selected option {selected_option}')
 
             # Prompt for difficulty level
-            difficulty_level = input("Select difficulty level (easy/medium/hard):\n").strip().lower()
+            difficulty_level = input(
+                "Select difficulty level (easy/medium/hard):\n"
+            ).strip().lower()
             valid_difficulties = ["easy", "medium", "hard"]
 
             while difficulty_level not in valid_difficulties:
-                difficulty_level = input("Invalid selection. Options are easy, medium, or hard. Enter again:\n").strip().lower()
+                difficulty_level = input(
+                    "Invalid selection. Options are easy, medium, or hard. "
+                    "Enter again:\n"
+                ).strip().lower()
 
-            # Ask questions based on the selected option and difficulty level, and track the score
+            # Ask questions based on the selected option and difficulty level,
+            # and track the score
             try:
-                score, total_questions = ask_multiple_questions(selected_option, difficulty_level)
+                score, total_questions = ask_multiple_questions(
+                    selected_option, difficulty_level
+                )
                 feedback = provide_feedback(score, total_questions)
-                print("------------------------------------------------------------------------")
-                print(f'Your score for this category is {score}:{total_questions}. {feedback}')
-                print("------------------------------------------------------------------------")
+                print(
+                    "--------------------------------------------------------"
+                    "----------------"
+                )
+                print(
+                    f'Your score for this category is '
+                    f'{score}:{total_questions}. '
+                    f'{feedback}'
+                )
+                print(
+                    "--------------------------------------------------------"
+                    "----------------"
+                )
             except Exception as e:
                 print(f"An error occurred while asking questions: {e}")
 
@@ -109,6 +139,7 @@ def main():
                 break
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()
