@@ -1,4 +1,4 @@
-# Mind Master Quiz Game
+# 🧠🎓 Mind Master Quiz Game
 
 Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application designed to test your knowledge across various topics with different difficulty levels. This README provides detailed instructions on how to use, install, and contribute to the project.
 
@@ -6,10 +6,10 @@ Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application de
 
  Mind Mastery repository URL: [https://github.com/yourusername/mind-master-quiz-game]
 
-## Overview
+## 🔍 Overview
 The MIND MASTER Quiz Game is a Python-based quiz application that allows users to answer questions from multiple topics. Users can choose from various topics and difficulty levels to tailor the quiz to their preferences. The application provides feedback based on user performance and allows them to continue or exit after each quiz session.
 
-## Features
+## ✨ Features
 
 * Interactive Quiz: Users can select from different quiz topics and difficulty levels.
 
@@ -19,7 +19,7 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
 
 * Easy Navigation: Users can choose to return to the home page or exit the game after completing a quiz.
 
-## Installation
+## 🔧 Installation
 ### Prerequisites
 
 * Python 3.x installed on your system.
@@ -52,7 +52,7 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
     ![alt text](image-11.png)  
 
 
-## Usage
+## 🚀 Usage
 ### Running the Game
 1. Start the Game
 
@@ -104,12 +104,12 @@ You will have the option to return to the home page or exit the game.
 
 ![alt text](image-15.png)
 
-## File Structure
+## 📂 File Structure
 * `run.py`: The main script that runs the quiz game. Handles user input, displays questions, and provides feedback.
   
 * `questions.py`: Contains quiz questions categorized by topic and difficulty level. Provides functions to retrieve and filter questions.
 
-## Functions Overview
+## 🔍 Functions Overview
 ### `run.py`
 * `get_user_name()`
     * Prompts the user to create a name. Ensures the input is non-empty.
@@ -143,7 +143,7 @@ You will have the option to return to the home page or exit the game.
    
    *  Asks a set of questions based on the selected topic and difficulty level, validates answers, and calculates the score.
   
-## Contributing
+## 🤝 Contributing
 * Contributions to the MIND MASTER Quiz Game are welcome! If you'd like to contribute, please follow these guidelines:
 
 * Fork the Repository: Create your own fork of the repository.
@@ -153,7 +153,7 @@ You will have the option to return to the home page or exit the game.
 * Test Your Changes: Ensure your changes work as expected and do not introduce bugs.
 * Submit a Pull Request: Push your changes to your fork and submit a pull request to the original repository.
 
-# Testing
+# 🧪 Testing
 To ensure the functionality of your quiz game, I followed these testing guidelines:
 
 ## 1. Unit Testing
@@ -191,13 +191,13 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
         * Tested with various topics and difficulty levels.
         * Verified that scores are calculated correctly and responses are accurate.
 
-## Bugs
+## 🐞 Bugs
 * No bugs remaining
 * Bugs such as `variable not defined` were encountered during the development of the application. Corrected by making sure that correct spelling of the variable was used.
 * Exception-handling errors: Fixed by providing a user with a meaningfull message if an unexpected value is input.
 * trailing whitespace: Indentation was fixed.
 
-## Cloning of the Repository Code locally
+## 🔄 Cloning of the Repository Code locally
 
 * Go to the Github repository that you want to clone.
 * Click on the Code button located above all the project files.
@@ -205,7 +205,7 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
 * Open the IDE of your choice and and paste the copied git url into the IDE terminal.
 * The project is now created as a local clone.
 
-## Deployment
+## 🛠️ Deployment
 I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an intuitive interface for deploying web applications. Here’s the process I followed:
 
 * Logged into Heroku: I accessed my Heroku account and went to the dashboard. I clicked the "New" button and selected "Create new app". I then provided a unique name for the app and chose the appropriate region.
@@ -222,7 +222,7 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 
 * Verifying Deployment: After the deployment process was complete, I checked that my application was functioning correctly by visiting the Heroku URL provided in my web browser.
 
-## Credits
+## 🙏 Credits
 * I am deeply grateful to my mentor, Spencer Barriball, for their exceptional guidance and support throughout this project. Their insights and assistance were crucial to its success.
 
 - **[Code Institute learning materials](https://codeinstitute.net/)**: For providing comprehensive learning resources and guidance throughout the development process.
@@ -233,7 +233,7 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 
 - A big inspiration for my README file was from : (https://github.com/zioan/pp3_inventory.git)
 
-## Contact
+## 📞 Contact
 For any issues or contributions, please contact: bicahaadiyah@gmail.com
 
 
