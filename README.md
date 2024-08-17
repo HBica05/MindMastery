@@ -30,7 +30,8 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
 
 1. Clone the Repository
    
-   [Cloning of the Repository Code locally] (#Cloning-of-the-Repository-Code-locally)
+    [How-to-clone](#Cloning-of-the-Repository-Code-locally)
+
    * git clone https://github.com/yourusername/mind-master-quiz-game.git
    
    * cd mind-master-quiz-game(project directory)
@@ -42,10 +43,10 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
   
     ![alt text](image-9.png)
 
-3. Navigate to Project Directory
+1. Navigate to Project Directory
  * Change to the directory where the run.py and questions.py files are located.  
 
-4. Run the Application
+2. Run the Application
 
 * Execute the following command to start the quiz game:  
     ![alt text](image-11.png)  
@@ -193,8 +194,8 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
 ## Bugs
 * No bugs remaining
 * Bugs such as `variable not defined` were encountered during the development of the application. Corrected by making sure that correct spelling of the variable was used.
-* Indentation error: making sure that the code was indented correctly.
 * Exception-handling errors: Fixed by providing a user with a meaningfull message if an unexpected value is input.
+* trailing whitespace: Indentation was fixed.
 
 ## Cloning of the Repository Code locally
 
@@ -205,6 +206,21 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
 * The project is now created as a local clone.
 
 ## Deployment
+I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an intuitive interface for deploying web applications. Here’s the process I followed:
+
+* Logged into Heroku: I accessed my Heroku account and went to the dashboard. I clicked the "New" button and selected "Create new app". I then provided a unique name for the app and chose the appropriate region.
+
+* Configuring Environment Variables: I set up the required environment variables in the Heroku dashboard under the "Settings" tab for my application.
+
+* Connecting to GitHub: In the deployment section of my Heroku app dashboard, I chose GitHub as the deployment method. I linked my GitHub account and selected the repository that holds the code for my Mind Mastery code.
+
+* Installing the Python Buildpack: In the settings section of my Heroku app dashboard, I went to the "Buildpacks" area and added the Python Buildpack. This step was necessary to ensure that my application could manage the Python dependency required for the template.
+
+* Configuring Automatic Deploys: Once GitHub was connected, I enabled automatic deploys for my app. This setup allowed Heroku to automatically deploy updates whenever I pushed changes to the linked GitHub repository.
+
+* Manual Deployments: I also had the option to manually trigger deployments from the dashboard. I could choose a branch to deploy and start the deployment process with a single click.
+
+* Verifying Deployment: After the deployment process was complete, I checked that my application was functioning correctly by visiting the Heroku URL provided in my web browser.
 
 ## Credits
 * I am deeply grateful to my mentor, Spencer Barriball, for their exceptional guidance and support throughout this project. Their insights and assistance were crucial to its success.
@@ -217,11 +233,8 @@ To ensure the functionality of your quiz game, I followed these testing guidelin
 
 - A big inspiration for my README file was from : (https://github.com/zioan/pp3_inventory.git)
 
-
 ## Contact
-
-For any issues or contributions, please contact 
-- bicahaadiyah@gmail.com
+For any issues or contributions, please contact: bicahaadiyah@gmail.com
 
 
 [Back to Top](#Mind-Master-Quiz-Game)
