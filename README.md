@@ -2,7 +2,7 @@
 
 Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application designed to test your knowledge across various topics with different difficulty levels. This README provides detailed instructions on how to use, install, and contribute to the project.
 
-[Live project hosted on Heroku]:()
+Live project hosted on Heroku:(https://mind-mastery-quiz-f5044d90b16c.herokuapp.com/)
 
  Mind Mastery repository URL: [https://github.com/HBica05/MindMastery.git]
 
@@ -262,9 +262,9 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 
 * Installing the Python Buildpack: In the settings section of my Heroku app dashboard, I went to the "Buildpacks" area and added the Python Buildpack. This step was necessary to ensure that my application could manage the Python dependency required for the template.
 
-* Configuring Automatic Deploys: Once GitHub was connected, I enabled automatic deploys for my app. This setup allowed Heroku to automatically deploy updates whenever I pushed changes to the linked GitHub repository.
+* Configuring Automatic Deploys: Once GitHub was connected, I enabled manual deploys for my app. This setup allows me to manually deploy updates whenever I pushed changes to the linked GitHub repository.
 
-* Manual Deployments: I also had the option to manually trigger deployments from the dashboard. I could choose a branch to deploy and start the deployment process with a single click.
+* Automatic Deployments: I also had the option to automatically trigger deployments from the dashboard. 
 
 * Verifying Deployment: After the deployment process was complete, I checked that my application was functioning correctly by visiting the Heroku URL provided in my web browser.
 
@@ -281,6 +281,8 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 3. Error Handling and User Support
 * Help and Instructions: Add a help section with instructions on how to play the game.
 * Support: Implement a system for users to report bugs or get support if they encounter issues.
+
+4. Adding a proper Domain name for the app.
 
 ## 🙏 Credits
 * I am deeply grateful to my mentor, Spencer Barriball, for their exceptional guidance and support throughout this project. Their insights and assistance were crucial to its success.
