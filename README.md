@@ -56,7 +56,6 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
 
 1. Clone the Repository
    
-    [How-to-clone](#🔄Cloning-of-the-Repository-Code-locally)
 
    * git clone (https://github.com/HBica05/MindMastery.git)
    
@@ -69,10 +68,10 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
   
     ![alt text](image-9.png)
 
-3. Navigate to Project Directory
+1. Navigate to Project Directory
  * Change to the directory where the run.py and questions.py files are located.  
 
-4. Run the Application
+2. Run the Application
 
 * Execute the following command to start the quiz game:  
     ![alt text](image-11.png)  
@@ -299,6 +298,3 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
   
 ## 📞 Contact
 For any issues or contributions, please contact: bicahaadiyah@gmail.com
-
-
-[Back to Top](#🧠🎓-mind-master-quiz-game)
