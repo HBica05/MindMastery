@@ -6,6 +6,32 @@ Welcome to the MIND MASTER Quiz Game! This is an interactive quiz application de
 
  Mind Mastery repository URL: [https://github.com/HBica05/MindMastery.git]
 
+## Table of Contents
+- [🧠🎓 Mind Master Quiz Game](#-mind-master-quiz-game)
+  - [Table of Contents](#table-of-contents)
+  - [🔍 Overview](#-overview)
+  - [✨ Features](#-features)
+  - [🔧 Installation](#-installation)
+    - [Prerequisites](#prerequisites)
+    - [Steps to Install](#steps-to-install)
+  - [🚀 Usage](#-usage)
+    - [Running the Game](#running-the-game)
+  - [📂 File Structure](#-file-structure)
+  - [🔍 Functions Overview](#-functions-overview)
+    - [`run.py`](#runpy)
+    - [`questions.py`](#questionspy)
+  - [🤝 Contributing](#-contributing)
+  - [📈 Logic Flow](#-logic-flow)
+- [🧪 Testing](#-testing)
+  - [PEP8 Testing](#pep8-testing)
+  - [Unit Testing](#unit-testing)
+  - [🐞 Bugs](#-bugs)
+  - [🔄 Cloning of the Repository Code locally](#-cloning-of-the-repository-code-locally)
+  - [🛠️ Deployment](#️-deployment)
+  - [Future Features to Implement](#future-features-to-implement)
+  - [🙏 Credits](#-credits)
+  - [📞 Contact](#-contact)
+
 ## 🔍 Overview
 The MIND MASTER Quiz Game is a Python-based quiz application that allows users to answer questions from multiple topics. Users can choose from various topics and difficulty levels to tailor the quiz to their preferences. The application provides feedback based on user performance and allows them to continue or exit after each quiz session.
 
@@ -43,10 +69,10 @@ The MIND MASTER Quiz Game is a Python-based quiz application that allows users t
   
     ![alt text](image-9.png)
 
-1. Navigate to Project Directory
+3. Navigate to Project Directory
  * Change to the directory where the run.py and questions.py files are located.  
 
-2. Run the Application
+4. Run the Application
 
 * Execute the following command to start the quiz game:  
     ![alt text](image-11.png)  
@@ -153,8 +179,8 @@ You will have the option to return to the home page or exit the game.
 * Test Your Changes: Ensure your changes work as expected and do not introduce bugs.
 * Submit a Pull Request: Push your changes to your fork and submit a pull request to the original repository.
 
-## Logic Flow
-Starting with a flowchart helped me visualize how the program would flow and its sequence.
+## 📈 Logic Flow
+Starting with a flowchart helped me to better visualize how the program would run.
 
 ![alt text](image-18.png)
 
@@ -176,7 +202,7 @@ All Python files have been validated using the [Code Institute PEP8 Validator](h
 
 ![alt text](image-16.png)
 
-## 1. Unit Testing
+## Unit Testing
  * To verify that each function in run.py and questions.py behaves as expected.
 
 * Setup:
@@ -214,7 +240,7 @@ All Python files have been validated using the [Code Institute PEP8 Validator](h
 ## 🐞 Bugs
 * No bugs remaining
 * Bugs such as `variable not defined` were encountered during the development of the application. Corrected by making sure that correct spelling of the variable was used.
-* Exception-handling errors: Fixed by providing a user with a meaningfull message if an unexpected value is input.
+* Exception-handling errors: Fixed by providing a user with a meaningful message if an unexpected value is input.
 * `trailing whitespace`: Indentation was fixed.
 * `Line too long` error was a common error displayed by the PEP8 validator: Fixed by breaking long lines into smaller lines.
   
@@ -242,6 +268,20 @@ I deployed the Mind Mastery Quiz using Heroku’s dashboard, which offers an int
 * Manual Deployments: I also had the option to manually trigger deployments from the dashboard. I could choose a branch to deploy and start the deployment process with a single click.
 
 * Verifying Deployment: After the deployment process was complete, I checked that my application was functioning correctly by visiting the Heroku URL provided in my web browser.
+
+## Future Features to Implement
+1. Timed Challenges
+* Timer: Adding a timer for each question or for the entire quiz to create a sense of urgency and increase the challenge.
+* Speed Rounds: Introduce rounds where users have to answer as many questions as possible within a certain time limit.
+
+2. Question Types and Formats
+* Multiple-Choice Questions: Incorporate multiple-choice questions in addition to the current format.
+* True/False Questions: Add true/false questions for variety.
+* Fill-in-the-Blanks: Use fill-in-the-blank questions to test knowledge in different ways.
+
+3. Error Handling and User Support
+* Help and Instructions: Add a help section with instructions on how to play the game.
+* Support: Implement a system for users to report bugs or get support if they encounter issues.
 
 ## 🙏 Credits
 * I am deeply grateful to my mentor, Spencer Barriball, for their exceptional guidance and support throughout this project. Their insights and assistance were crucial to its success.
